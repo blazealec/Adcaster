@@ -1,0 +1,53 @@
+Adcaster – Project Notes
+========================
+
+Last updated: {{DATE}}
+
+Purpose
+-------
+Farcaster Mini-App that lets users watch video ads and receive crypto rewards.
+
+Current state (MVP)
+-------------------
+1. Front-end
+   • React + Vite scaffold, responsive UI.
+   • Fetches video ad from `/api/getAd` (AdEx) and plays it.
+   • Uses Farcaster Frame SDK (`ready`, haptics) + Quick Auth JWT.
+   • On video end: fires tracking pixels, posts `/api/complete`, shows claim button.
+
+2. Back-end (Vercel Functions)
+   • `api/getAd.ts` – calls AdEx Network with `ADEX_PUBLISHER_ID` env var.
+   • `api/complete.ts` – verifies Quick Auth token, logs completed view (stub for DB).
+
+3. Manifest & Embed
+   • `public/.well-known/farcaster.json` – domain verified, homeUrl set.
+   • `index.html` contains valid `fc:frame` meta (needs og.png).
+
+Pending items
+-------------
+• Obtain `ADEX_PUBLISHER_ID` and set it in Vercel env vars.
+• Upload 3:2 `public/og.png` for embed preview.
+• Database integration (e.g. PlanetScale, Supabase) to record impressions & balances.
+• Payout mechanism: batch ERC-20 (USDC) transfers on Base/Polygon.
+• Notification webhook to inform users once payout occurs.
+• Multiple ad providers fallback.
+• Analytics & dashboard for advertisers.
+
+Quick commands
+--------------
+Dev:
+```bash
+npm install
+npm run dev
+```
+Deploy flow: push to GitHub → Vercel auto-deploys.
+
+Environment variables
+---------------------
+ADEX_PUBLISHER_ID=<hex-string>
+
+References
+----------
+• Farcaster Mini-App docs: https://miniapps.farcaster.xyz/docs/getting-started
+• AdEx API docs: https://docs.adex.network (or email support)
+• Quick Auth: https://github.com/farcasterxyz/quick-auth 
