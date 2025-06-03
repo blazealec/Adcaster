@@ -1,0 +1,12 @@
+{
+  "frame": {
+    "version": "1",
+    "name": "Adcaster",
+    "iconUrl": "https://raw.githubusercontent.com/farcasterxyz/assets/main/miniapp.png",
+    "homeUrl": "https://example.com",
+    "imageUrl": "https://raw.githubusercontent.com/farcasterxyz/assets/main/miniapp_og.png",
+    "buttonTitle": "🚀 Earn now",
+    "splashImageUrl": "https://raw.githubusercontent.com/farcasterxyz/assets/main/miniapp.png",
+    "splashBackgroundColor": "#ffffff"
+  }
+} 
