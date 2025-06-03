@@ -1,4 +1,9 @@
 {
+  "accountAssociation": {
+    "header": "eyJmaWQiOjg5NzQzOSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDM0RjM5NDg5NDZEODcxNzdmNGYwMzg1M0Q1ZWJGNWU1ODdkQmRBYmUifQ",
+    "payload": "eyJkb21haW4iOiJhZGNhc3Rlci52ZXJjZWwuYXBwIn0",
+    "signature": "MHhmOTlmYWEyZDFjYjY3Njc5NzBlYzAyOWUxNDFkYTQxNzlkMmZkNTIzZTM3MmNjOTQ3NjlkMTFkZTYzMjQxYjIwNDE3NzE3ZmYxYTZmOTJjZGExMzVlZjFjYzAxMjM5ZjYzNjBlYzU0MjVkM2VkMTEzYmQ2NDhhMTEwYzY1MjgyZDFj"
+  },
   "frame": {
     "version": "1",
     "name": "Adcaster",
