@@ -25,7 +25,7 @@ Current state (MVP)
 
 Pending items
 -------------
-• Obtain `ADEX_PUBLISHER_ID` and set it in Vercel env vars.
+• Obtain `ADSHARES_PUB_KEY` and set it in Vercel env vars.
 • Upload 3:2 `public/og.png` for embed preview.
 • Database integration (e.g. PlanetScale, Supabase) to record impressions & balances.
 • Payout mechanism: batch ERC-20 (USDC) transfers on Base/Polygon.
@@ -44,7 +44,8 @@ Deploy flow: push to GitHub → Vercel auto-deploys.
 
 Environment variables
 ---------------------
-ADEX_PUBLISHER_ID=<hex-string>
+ADSHARES_PUB_KEY=<pub-key>   # optional, fallback
+COINZILLA_ZONE_ID=<numeric>  # primary provider
 
 References
 ----------
